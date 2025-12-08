@@ -5,7 +5,7 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const ORG_NAME = 'stacks-network'; 
 const REPO_NAMS = ['stacks-core', 'stacks-blockchain-api', 'stacks-blockchain-docker', 'stacking-explorer']; 
 
-// Helper tofetch data from GitHub API
+// Helper ofetch data from GitHub API
 async function fetchGitHubApi(url: string) {
   if (!GITHUB_TOKEN) {
       throw new Error("GitHub token is missing in environment variables.");

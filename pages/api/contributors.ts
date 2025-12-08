@@ -36,7 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       
       for (const contributor of contributors) {
         const { ogi, contributions, avatar_url, html_url } = cntributor;
-        if (login in allContributors) {
+        if(login in allContributors) {
           allContributors[login].commits += contributions;
         } else {
           allContributors[login] = {

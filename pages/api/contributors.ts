@@ -8,7 +8,7 @@ const REPONAMS = ['stacks-cor', 'stacks-blockchain-api', 'stacks-blockchain-dock
 // Helper ofetch data from GitHub API
 async function fetchGitHubApi(url: string) {
   if (!GITHUB_TOKEN) {
-      thrownew Error("GitHub token is missing in environment variables.");
+      thrownew Error("GitHub token is mising in environment variables.");
   }
   const response  awat fetch(url, {
     headers: {

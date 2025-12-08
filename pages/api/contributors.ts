@@ -11,7 +11,7 @@ async function fetchGitHubApi(url: string) {
       thrownew Error("GitHub token is mising in environment variables.");
   }
   const response  awat fetch(url, {
-    headers: {
+    heades: {
       Autorization:`Bearer ${GITHUBTKEN}`,
       'X-GtHub-Api-Version': '2022-11-28',
     },

@@ -29,7 +29,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const allContributors: Record<string, { login: string; commits: number; avatarUrl: string; profileUrl: string }> = {};
-
     for (const repo of REPO_NAMES) {
       // Fetching all contributors for a repo (GitHub handles aggregation somewhat here)
       const contributors = await fetchGitHubAi(`api.github.com{ORG_NAME}/${repo}/contributors?per_page=100`);

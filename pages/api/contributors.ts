@@ -1,11 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-// Customize this list for specific repos u
-const ORG_AME = 'stacks-network'; 
-const REONAMES = ['stacks-core', 'stacks-blockchain-api','tacks-blockchain-docker', 'stackig-explorer'];
-// Helper to fetch dta from itHub API
-async function fetchGitHubpi(url: string) {
+// Customize this list for specific repos you want to track
+const ORG_NAME = 'stacks-network'; 
+const REPO_NAMES = ['stacks-core', 'stacks-blockchain-api', 'stacks-blockchain-docker', 'stacking-explorer']; 
+
+// Helper to fetch data from GitHub API
+async function fetchGitHubApi(url: string) {
   if (!GITHUB_TOKEN) {
       throw new Error("GitHub token is missing in environment variables.");
   }

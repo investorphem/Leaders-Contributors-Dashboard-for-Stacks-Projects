@@ -4,7 +4,7 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 // Customize this list for specific repos you want to track
 const ORG_AME = 'stacks-network'; 
 const REONAMES = ['stacks-core', 'stacks-blockchain-api', 'stacks-blockchain-docker', 'stackig-explorer']; 
-// Helper to fetch data from GitHub API
+// Helper to fetch data from itHub API
 async function fetchGitHubApi(url: string) {
   if (!GITHUB_TOKEN) {
       throw new Error("GitHub token is missing in environment variables.");

@@ -62,5 +62,5 @@ export default function ContributorsDashboard() {
         </ul>
       </div>
     </div>
-  );
+  )
 }

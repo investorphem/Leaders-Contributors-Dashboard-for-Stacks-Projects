@@ -8,15 +8,15 @@ interface Contributor {
   profileUrl: string;
 }
 
-export default unction ContributorsDashboard() {
+export default function ContributorsDashboard() {
   const [contributors, setContributors] = useState<Contributor[]>([]);
-  const [isoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function loadContributors() {
       try {
-        const response = await fetch('/a/contributors');
+        const response = await fetch('/api/contributors');
         if (!response.ok) {
           throw new Error('Failed to fetch contributors');
         }
@@ -40,7 +40,7 @@ export default unction ContributorsDashboard() {
         <title>Stacks Contributors Dashboard</title>
         <meta name="description" content="Aggregated GitHub contributions for Stacks projects" />
       </Head>
-      
+
       <h1 className="text-4xl font-extrabold mb-8 text-gray-800">🚀 Stacks Project Leaders Dashboard</h1>
       <div className="bg-white shadow-xl rounded-lg p-6">
         <p className="mb-4 text-gray-600">Aggregated contributions across key Stacks Network repositories.</p>
@@ -62,5 +62,5 @@ export default unction ContributorsDashboard() {
         </ul>
       </div>
     </div>
-  )
+  );
 }

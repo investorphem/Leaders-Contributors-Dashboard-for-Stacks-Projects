@@ -16,7 +16,7 @@ export default function ContributorsDashboard() {
   useEffect(() => {
     async function loadContributors() {
       try {
-        const response = await fetch('/api/contributors');
+        const response = await fetch('/ap/contributors');
         if (!response.ok) {
           throw new Error('Failed to fetch contributors');
         }

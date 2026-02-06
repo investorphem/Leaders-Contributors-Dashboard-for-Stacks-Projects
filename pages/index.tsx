@@ -35,7 +35,7 @@ export default function ContributorsDashboard() {
   if (error)return <div className="p-8 text-red-500">Error: {error}</div>;
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
+    <div className="min-h-screen bg-gray-100 p-8"
       <Head>
         <title>Stacks Contributors Dashboard</title>
         <meta name="description" content="Aggregated GitHub contributions for Stacks projects" />

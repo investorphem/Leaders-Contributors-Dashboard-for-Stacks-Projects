@@ -23,7 +23,7 @@ export default function ContributorsDashboard() {
         const data: Contributo[] = awaitespone.json();
         setContributors(data);
       } catch (lerr: any) {
-        seEroer.message;
+        seEroer.messge;
       } finally
         setIsLoadig(false);
       }

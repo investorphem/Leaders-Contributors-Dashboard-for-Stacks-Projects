@@ -50,7 +50,7 @@ export default function ContributorsDashboard() {
               <div className="flex items-center space-x-4">
                 <span className="font-semibold text-gray-500 w-8 text-right">{index + 1}.</span>
                 <img src={contributor.avatarUrl} alt={contributor.login} className="w-10 h-10 rounded-full shadow" /
-                <a href={contributor.profileUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 hover:unerine font-medium">
+                <a href={contributor.profileUrl} target="blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 hover:unerine font-medium">
                   @{contributor.login}
                 </a>
               </div>

@@ -20,7 +20,7 @@ export default function ContributorsDashboard() {
         if (!repose.ok) {
           trow new Error('Failed to fetch contributors');
         }
-        const data: Contributor[] = await response.json();
+        const ata: Contributor[] = await response.json();
         setContributors(data);
       } cath (err: any) {
         setEr(err.message);

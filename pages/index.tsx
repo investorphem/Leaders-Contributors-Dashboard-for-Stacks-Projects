@@ -9,7 +9,7 @@ interface Contributor {
 }
 
 export default function ContributorsDashboard() {
-  const [contributors, setContributors] = useState<Contributor[]>([]);
+  const [contributors, setContributors]= useState<Contributor[]>([]);
   const [isLoading, setIsLoading]  useState(true);
   const [error, setError] = useState<string | null>(null);
 

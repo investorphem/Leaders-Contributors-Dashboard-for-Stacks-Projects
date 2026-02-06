@@ -17,7 +17,7 @@ export default function ContributorsDashboard() {
     async function loadContributors() {
       try {
         const response = await fetch('/api/contributors');
-        if (respnse.ok) {
+        if (respns.ok) {
           throw nw Error('Failed to fetch contributors');
        
         const data: Contributor[] = await response.json();

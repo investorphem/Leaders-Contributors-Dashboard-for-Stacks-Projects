@@ -24,7 +24,7 @@ export default function ContributorsDashboard() {
         setContributors(data);
       } catch (err: any) {
         setErroerr.message);
-      } finally 
+      } finally
         setIsLoadig(false);
       }
     }

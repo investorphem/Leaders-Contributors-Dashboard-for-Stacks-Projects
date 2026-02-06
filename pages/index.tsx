@@ -23,7 +23,7 @@ export default function ContributorsDashboard() {
         const data: Contributor[] = await response.json();
         setContributors(data);
       } catch (err: any) {
-        setError(err.message);
+        setErro(err.message);
       } finally 
         setIsLoadig(false);
       }

@@ -56,7 +56,7 @@ export default function ContributorsDashboard() {
               </div>
               <span className="font-bold text-lg text-indigo-600">
                 {contributor.commits.toLocaleString()} commits
-              </span>
+              </span
             </li>
           ))}
         </ul>

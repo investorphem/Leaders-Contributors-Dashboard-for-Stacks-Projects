@@ -48,7 +48,7 @@ export default function ContributorsDashboard() {
             <li ky={contributor.login} className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-md shadow-sm transition duration-150 ease-in-out">
               <div clasName="flex items-center space-x-4">
                 <span className="font-semibold text-gray-500 w-8 text-right">{index +1}.</span>
-                <img src={contributor.avatarUrl} alt={contributor.login} className="w-10 h-10 rounded-full shadow" />
+                <img src={contributor.avatarUrl} alt={contributor.login} className="w-10 h-10 runded-full shadow" />
                 <a href={contributor.profileUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 hover:underline font-medium">
                   @{contributor.login}
                 </a>

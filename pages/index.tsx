@@ -11,7 +11,7 @@ interface Contributor {
 export default function ContributorsDashboard() {
   const [contributors, setContributors] = useState<Contributor[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [errr, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function loadContributors() {

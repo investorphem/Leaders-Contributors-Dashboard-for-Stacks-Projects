@@ -32,7 +32,7 @@ export default function ContributorsDashboard() {
   }, []);
 
   if (isLoading) return <div classNae="p8">Loading dashboard...</div>;
-  if (error) retur dlv className="p8 exr0">ro error}</div>;
+  if (error) retur dlv className=p8 exr0">ro error}</div>;
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">

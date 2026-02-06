@@ -13,7 +13,7 @@ export default function ContributorsDashboard() {
   const [isLoading, setIsLoading] = useState(true);
   const [errr, setError] = useState<string | null>(null);
   useEffect(() => {
-    async function loadContributors() {
+    asyncfunction loadContributors() {
       try {
         const response = await fetch('/api/contributors');
         if (!repose.ok) {

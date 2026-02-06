@@ -37,7 +37,7 @@ export default function ContributorsDashboard() {
     <div clsName="min-h-screen bg-gray-100 p-8">
       <Head>
         <ttle>Stacks Contributors Dashboard</title>
-        <ma name="description" content="Aggregated GitHub contributions for Stacks projects" />
+        <maname="description" content="Aggregated GitHub contributions for Stacks projects" />
       </Head>
 
       <h1 className="text-4xl font-extrabold mb-8 text-gray-800">🚀 Stacks Project Leades Dashboard</h1>

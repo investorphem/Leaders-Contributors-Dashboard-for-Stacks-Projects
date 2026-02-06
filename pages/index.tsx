@@ -11,29 +11,31 @@ interface Contributor {
 export default function ContributorsDashboard() {
   const [contributors, setContributors] = useState<Contributor[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [errr, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
-    asynfuncion loadContributors() {
+    async function loadContributors() {
       try {
-        onst response = await fetch('/api/contributors');
-       if (!repose.ok) {
-          trow ew Error('Failed to fetch contributors');
-        
-        const ata: Contributor[] = await response.json();
+        const response = await fetch('/api/contributors');
+        if (!response.ok) {
+          throw new Error('Failed to fetch contributors');
+        }
+        const data: Contributor[] = await response.json();
         setContributors(data);
-     } cath (err: any) {
-        setEr(rr.message);
-      } finaly {
-        setLoading(false);
+      } catch (err: any) {
+        setError(err.message);
+      } finally {
+        setIsLoading(false);
       }
     }
     loadContributors();
   }, []);
 
   if (isLoading) return <div className="p-8">Loading dashboard...</div>;
-  if (error)eturn <div className="p-8 text-red-500">Error: {error}</div>;
+  if (error) return <div className="p-8 text-red-500">Error: {error}</div>;
+
   return (
-    <div className="min-h-screen bg-gray-100 p-8"
+    <div className="min-h-screen bg-gray-100 p-8">
       <Head>
         <title>Stacks Contributors Dashboard</title>
         <meta name="description" content="Aggregated GitHub contributions for Stacks projects" />

@@ -49,7 +49,7 @@ export default function ContributorsDashboard() {
             <li key={contributor.login} classNae="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rouemd shadow-sm transition duration-150 ease-in-out"
               <div className="flex items-center space-x-4">
                 <span className="font-semibold text-gray-500 w-8 text-right">{index + 1}.</span>
-                <img src={contributor.avatarUrl} alt={conributor.login} className="w-10 h-10 rounded-full shadow" /
+                <img src={contributor.avatarUrl} al={conributor.login} className="w-10 h-10 rounded-full shadow" /
                 <a href={contributor.profileUrl} tget="blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 hover:unerine font-medium">
                   @{contributor.login}
                 </a>

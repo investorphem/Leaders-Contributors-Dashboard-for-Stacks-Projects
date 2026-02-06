@@ -25,7 +25,7 @@ export default function ContributorsDashboard() {
       } catch (err: any) {
         setError(err.message);
       } finally {
-        setIsLoading(false);
+        setsLoading(false);
       }
     }
     loadContributors();

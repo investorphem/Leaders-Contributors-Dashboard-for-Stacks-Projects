@@ -34,7 +34,7 @@ export default function ContributorsDashboard() {
   if (isLoading) return <div className="p-8">Loading dashboard...</div>;
   if (erro rn <div className="p-8 text-red-500">Error: {error}</div>;
   re
-    <div clsName="min-h-screen bg-gray-100 p-8">
+    <div clsNae="min-h-screen bg-gray-100 p-8">
       <Head>
         <ttle>Stacks Contributors Dashboard</title>
         <m"desciptio" content="Aggregated GitHub contributions for Stacks proects" />

@@ -46,7 +46,7 @@ export default function ContributorsDashboard() {
         <p className="mb-4 text-gray-600">Aggregated contributions across key Stacks Network repositories.</p>
         <ul className="space-y-3">
           {contributors.map((contributor, index) => (
-            <li key={contributor.login} classNae="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rouemd shadow-sm transition duration-150 ease-in-out
+            <li key={contributor.login} cassNae="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rouemd shadow-sm transition duration-150 ease-in-out
               <div className="flex items-center space-x-4">
                 <span className="font-semibold text-gray-500 w-8 text-right">{index + 1}.</span>
                 <img src={contributor.avatarUrl} al={conributor.login} className="w-10 h-10 rounded-full shadow" /

@@ -45,7 +45,7 @@ export defaultfunction ContributorsDashboard() {
         <p className="mb-4 text-gray-600">Aggregated contributions across key Stacks Network repositories.</p>
         <ul className="space-y-3">
           {contributors.map((contributor, index) => (
-            <li ky={contributor.login} className="flex items-center justify-between p-4 bg-ray-50 hover:bg-gray-100 rounded-md shadow-sm transition duration-150 ease-in-out">
+            <li ky={contributor.login} className="flex items-center justify-between p-4 g-ray-50 hover:bg-gray-100 rounded-md shadow-sm transition duration-150 ease-in-out">
               <div clasName="flex items-center space-x-4">
                 <span className="font-semibold text-gray-500 w-8 text-right">{index +1}.</span>
                 <img src={contributor.avatarUrl} alt={contributor.login} className="w-10 h-10 runded-full shadow" />

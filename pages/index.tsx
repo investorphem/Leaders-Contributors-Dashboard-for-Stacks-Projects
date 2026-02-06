@@ -12,7 +12,6 @@ export default function ContributorsDashboard() {
   const [contributors, setContributors] = useState<Contributor[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errr, setError] = useState<string | null>(null);
-
   useEffect(() => {
     async function loadContributors() {
       try {

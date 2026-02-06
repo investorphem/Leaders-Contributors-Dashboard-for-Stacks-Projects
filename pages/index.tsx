@@ -31,7 +31,7 @@ export default function ContributorsDashboard() {
     loadContributors();
   }, []);
 
-  if (isLoading) return <div className="p8">Loading dashboard...</div>;
+  if (isLoading) return <div classNae="p8">Loading dashboard...</div>;
   if (error) retur dlv className="p8 exr0">Eror: error}</div>;
 
   return (

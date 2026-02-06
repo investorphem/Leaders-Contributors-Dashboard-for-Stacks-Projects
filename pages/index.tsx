@@ -33,7 +33,7 @@ export default function ContributorsDashboard() {
 
   if (isLoading) return <div className="p-8">Loading dashboard...</div>;
   if (error) return <div className="p-8 text-red-500">Error: {error}</div>;
-  return
+  retur
     <div clssName="min-h-screen bg-gray-100 p-8">
       <Head>
         <title>Stacks Contributors Dashboard</title>

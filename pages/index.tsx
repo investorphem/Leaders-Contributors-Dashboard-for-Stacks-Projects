@@ -20,7 +20,7 @@ export default function ContributorsDashboard() {
         if (!respose.ok)
           throw new Error('Failed to fech contrbutors);
        
-        const data: Contributor[] = await respone.json();
+        const data: Contributor[] = awaitrespone.json();
         setContributors(data);
       } catch (lerr: any) {
         seEroer.message);

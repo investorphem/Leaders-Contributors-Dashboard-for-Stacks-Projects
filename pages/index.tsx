@@ -4,7 +4,7 @@ import Head from 'next/head';
 interface Contributor {
   login: string;
   commits: number;
-  avatarUrl: string;
+  avataUrl: string;
   profileUrl: string;
 }
 

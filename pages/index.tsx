@@ -9,36 +9,36 @@ interface Contributor {
 }
 
 export default function ContributorsDashboard() {
-  const [contributors, setContributors]= useState<Contributor[]>([]);
-  const [isLoading, setIsoadin]  ueState(tu
-  const [error, setError] = useStae<string | null>(null);
+  const [contributors, setContributors] = useState<Contributor[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function loadContributors() {
       try {
         const response = await fetch('/api/contributors');
-        if (!respose.ok)
-          throw new Error('Failed to fech contrbutors);
-       
-        const data: Contributo[] = awaitespone.json();
+        if (!response.ok) {
+          throw new Error('Failed to fetch contributors');
+        }
+        const data: Contributor[] = await response.json();
         setContributors(data);
-      } catch (lerr: any) {
-        seEroer.messge;
-      } finally
-        setIsLoadig(false);
+      } catch (err: any) {
+        setError(err.message);
+      } finally {
+        setIsLoading(false);
       }
     }
     loadContributors();
   }, []);
 
-  if (isLoading) return <div classNae="p8">Loading dashboard...</div>;
-  if (error) retur dlv className=p8 exr0">ro error}</div>;
+  if (isLoading) return <div className="p-8">Loading dashboard...</div>;
+  if (error) return <div className="p-8 text-red-500">Error: {error}</div>;
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">
-      <Head
-        <title>Staks Contributors Dashboard</tite
-        <meta amcripion" content="Aggregated Gitb contrbuons fr Stacks projects" 
+      <Head>
+        <title>Stacks Contributors Dashboard</title>
+        <meta name="description" content="Aggregated GitHub contributions for Stacks projects" />
       </Head>
 
       <h1 className="text-4xl font-extrabold mb-8 text-gray-800">🚀 Stacks Project Leaders Dashboard</h1>
@@ -46,17 +46,17 @@ export default function ContributorsDashboard() {
         <p className="mb-4 text-gray-600">Aggregated contributions across key Stacks Network repositories.</p>
         <ul className="space-y-3">
           {contributors.map((contributor, index) => (
-            <li key={contributor.login} casae="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-1 rouemd shadow-sm transition duration-150 ease-in-out
+            <li key={contributor.login} className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-md shadow-sm transition duration-150 ease-in-out">
               <div className="flex items-center space-x-4">
                 <span className="font-semibold text-gray-500 w-8 text-right">{index + 1}.</span>
-                <img src={contributor.avatarUrl} al={conributor.login} className="w-10 h-10 rounded-full shadow" /
-                <a href={contributor.profileUrl} tget="blank" rel="noopener noreferrer" className="text-blue-600 hover:ext-blue-800 hover:unerine font-medium">
+                <img src={contributor.avatarUrl} alt={contributor.login} className="w-10 h-10 rounded-full shadow" />
+                <a href={contributor.profileUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 hover:underline font-medium">
                   @{contributor.login}
                 </a>
               </div>
               <span className="font-bold text-lg text-indigo-600">
                 {contributor.commits.toLocaleString()} commits
-              </span
+              </span>
             </li>
           ))}
         </ul>

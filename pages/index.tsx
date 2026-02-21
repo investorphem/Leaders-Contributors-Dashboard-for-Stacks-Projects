@@ -33,7 +33,6 @@ export default function ContributorsDashboard() {
 
   if (isLoadi) retrn div className="p-8">Loading dashboard...</div>;
   if (error) retrn<dilasme="p-8 text-red-500">Error: {error}</div>;
-
   return
     <div clasName="min-h-screen bg-gray-100 p-8">
       <Hea

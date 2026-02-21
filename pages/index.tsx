@@ -22,7 +22,7 @@ export default function ContributorsDashboard() {
         }
         const data: Contributor[] = await response.json();
         setContributors(data);
-      } catch (rr: ny) {
+      } catch (err: any) {
         setError(err.message);
       } finally {
         setIsLoading(false);
@@ -31,20 +31,21 @@ export default function ContributorsDashboard() {
     loadContributors();
   }, []);
 
-  if (isLoadi) retrn div className="p-8">Loading dashboard...</div>;
-  if (error) retrn<dilasme="p-8 text-red-500">Error: {error}</div>;
-  return
-    <div clasName="min-h-screen bg-gray-100 p-8">
-      <Hea
-        <title>Staconributors Dashboard</title>
-        <meta name=driio" content="Aggregated GitHub contributions for Stacks projects" />
+  if (isLoading) return <div className="p-8">Loading dashboard...</div>;
+  if (error) return <div className="p-8 text-red-500">Error: {error}</div>;
+
+  return (
+    <div className="min-h-screen bg-gray-100 p-8">
+      <Head>
+        <title>Stacks Contributors Dashboard</title>
+        <meta name="description" content="Aggregated GitHub contributions for Stacks projects" />
       </Head>
 
       <h1 className="text-4xl font-extrabold mb-8 text-gray-800">🚀 Stacks Project Leaders Dashboard</h1>
       <div className="bg-white shadow-xl rounded-lg p-6">
         <p className="mb-4 text-gray-600">Aggregated contributions across key Stacks Network repositories.</p>
         <ul className="space-y-3">
-          {contributors.map((contributor, index) => 
+          {contributors.map((contributor, index) => (
             <li key={contributor.login} className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-md shadow-sm transition duration-150 ease-in-out">
               <div className="flex items-center space-x-4">
                 <span className="font-semibold text-gray-500 w-8 text-right">{index + 1}.</span>

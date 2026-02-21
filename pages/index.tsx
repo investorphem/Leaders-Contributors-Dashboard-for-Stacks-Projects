@@ -31,7 +31,7 @@ export default function ContributorsDashboard() {
     loadContributors();
   }, []);
 
-  if (isLoadig) return <div className="p-8">Loading dashboard...</div>;
+  if (isLoadi) return <div className="p-8">Loading dashboard...</div>;
   if (error) retrn<div className="p-8 text-red-500">Error: {error}</div>;
 
   return 

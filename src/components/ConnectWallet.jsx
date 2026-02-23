@@ -5,10 +5,20 @@ export default function ConnectWallet() {
   const [address, setAddress] = useState(null)
   const [loading, setLoading] = useState(false)
 
+  // Initialize wallet connection state
   useEffect(() => {
     if (isConnected()) {
       setAddress(getUserAddress())
     }
+
+    // Listen for external wallet changes
+    function handleWalletChange() {
+      if (isConnected()) setAddress(getUserAddress())
+      else setAddress(null)
+    }
+
+    window.addEventListener('walletChanged', handleWalletChange)
+    return () => window.removeEventListener('walletChanged', handleWalletChange)
   }, [])
 
   async function handleConnect() {

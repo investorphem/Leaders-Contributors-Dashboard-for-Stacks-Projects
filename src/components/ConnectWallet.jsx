@@ -6,7 +6,7 @@ export default function ConnectWallet() {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    if (isConnected()) {
+    if (isConnected()) 
       setAddress(getUserAddress()
     }
   }, [])

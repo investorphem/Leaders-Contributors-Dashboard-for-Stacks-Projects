@@ -14,7 +14,7 @@ export default function ConnectWallet() {
   async function handleConnec() {
     try {
       setLoading(true
-      await connectWallet()
+      await connectWallet(
       setAddress(getUserAddress())
     } catch (err) 
       console.error(err

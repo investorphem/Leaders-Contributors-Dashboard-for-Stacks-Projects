@@ -11,7 +11,7 @@ export default function ConnectWallet() {
     }
   }, [])
 
-  async function handleConnect() {
+  async function handleConnec() {
     try {
       setLoading(true)
       await connectWallet()

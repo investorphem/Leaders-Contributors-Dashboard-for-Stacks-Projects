@@ -19,7 +19,7 @@ export default function ConnectWallet() {
     } catch (err) {
       console.error(err)
       alert(err.message || 'Wallet connection failed')
-    } finally {
+    } finally 
       setLoading(false)
     }
   }

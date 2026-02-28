@@ -1,273 +1,68 @@
-# Leaders & Contributors Dashboard (Stacks)
+# Leaders Contributors Dashboard
 
-A full-featured analytics and activity dashboard built on the **Stacks blockchain**, designed to help project builders, contributors, and ecosystem participants track wallet activity, contributions, and on-chain engagement across Stacks. The application supports modern wallet connectivity, real-time data fetching, and a mobile-first user experience.
+A powerful Stacks ecosystem dashboard for tracking project leaders, contributors, engagement metrics, and on-chain activity.
 
----
+## Overview
 
-## 🚀 Overview
+This dashboard provides real-time insights, contributor reputation data, and project growth analytics to support transparent, community-driven development on Stacks.
 
-The Leaders & Contributors Dashboard is a lightweight, contract-free web application focused on **visibility, transparency, and engagement tracking** on Stacks. It enables users to connect their wallets, monitor activity, and visualize participation metrics using only public blockchain data and secure wallet authentication.
+## Features
 
-The app runs entirely client-side, requiring **no backend servers or smart contracts**, making it fast, secure, and easy to deploy.
+- **Leader Tracking**: Monitor and track project leaders in the Stacks ecosystem
+- **Contributor Analytics**: View detailed contributor metrics and engagement data
+- **On-Chain Metrics**: Real-time blockchain activity and transaction data
+- **Project Growth**: Track growth metrics across multiple Stacks projects
 
----
+## Tech Stack
 
-## ✨ Key Features
+- **Frontend**: React, Next.js
+- **Styling**: Tailwind CSS
+- **Blockchain**: Stacks (Bitcoin L2)
+- **Testing**: Jest
 
-### 🔐 Wallet Connectivity
-- Multi-wallet support (Leather + Xverse)
-- WalletConnect-style QR and deep-link flows
-- Secure, non-custodial authentication
-- Automatic wallet detection
+## Getting Started
 
-### 📊 Activity & Contribution Tracking
-- Wallet-based activity monitoring
-- Address-level analytics
-- Real-time on-chain data via public APIs
-- Session-based user state
+### Prerequisites
 
-### 📱 Mobile-First Experience
-- Fully responsive UI
-- QR modal on desktop
-- Deep-link wallet connection on mobile
-- Optimized for Chrome & Safari
+- Node.js 18+
+- npm or yarn
+- A Stacks wallet (Hiro Wallet recommended)
 
-### 🎨 Modern UI
-- Clean, minimal interface
-- Built with TailwindCSS
-- Fast load times and smooth transitions
+### Installation
 
-### ⚡ No Smart Contracts Required
-This project runs entirely on:
-- Client-side React
-- Public Stacks APIs
-- Wallet authentication
-- External price/indexer services
+```bash
+# Install dependencies
+npm install
 
----
-
-## 🛠 Tech Stack
-
-- **React + Vite** – Modern front-end tooling
-- **TailwindCSS** – Utility-first styling
-- **@stacks/connect** – Wallet integration
-- **Stacks API** – On-chain activity & balances
-- **WalletConnect-style flow** – Mobile + QR support
-- **LocalStorage** – Session persistence
-
----
-
-## 📦 Project Structure
-
-```
-leaders-contributors-dashboard/
-│── src/
-│   ├── components/
-│   ├── hooks/
-│   ├── pages/
-│   ├── utils/
-│   ├── App.jsx
-│   └── main.jsx
-│
-│── public/
-│   ├── icon.png
-│   └── index.html
-│
-│── package.json
-└── vite.config.js
+# Run development server
+npm run dev
 ```
 
----
+### Environment Variables
 
-## 🔧 How It Works
+Create a `.env.local` file with the following:
 
-1. User opens the dashboard
-2. Wallet connect modal is triggered
-3. User selects a wallet (desktop or mobile)
-4. Wallet address is detected securely
-5. Public APIs are queried for activity data
-6. Data is aggregated into a clean dashboard view
-
----
-
-## 🌐 Deployment
-
-This is a fully client-side application and can be deployed on:
-- **Vercel**
-- **Netlify**
-- **GitHub Pages**
-
-No environment variables or backend services are required for basic functionality.
-
----
-
-## 🔐 WalletConnect Configuration
-
-This project uses a WalletConnect-style authentication flow built on the Stacks Connect SDK, enabling seamless wallet connections across desktop and mobile environments.
-
-### Supported Wallets
-- Leather
-- Xverse
-
-Both wallets support:
-- Desktop browser extensions
-- Mobile deep linking
-- QR-based connection flows
-
----
-
-### Required Configuration
-
-#### 1. App Metadata
-
-Your app must expose valid metadata:
-
-```ts
-const appConfig = {
-  name: "Leaders & Contributors Dashboard",
-  icon: "https://your-domain.com/icon.png",
-};
+```env
+NEXT_PUBLIC_STACKS_NETWORK=testnet
+NEXT_PUBLIC_API_URL=your_api_url
 ```
 
-**Requirements**
-- Icon size: **512×512**
-- Publicly accessible
-- HTTPS only
+## Project Structure
 
----
-
-#### 2. Wallet Connection Setup
-
-```ts
-import { showConnect } from "@stacks/connect";
-
-showConnect({
-  appDetails: appConfig,
-  onFinish: ({ userSession }) => {
-    // wallet connected
-  },
-  onCancel: () => {
-    // user closed modal
-  },
-});
+```
+├── src/
+│   ├── components/     # React components
+│   └── lib/           # Utility functions
+├── pages/             # Next.js pages
+├── utils/             # Helper functions
+├── types.ts           # TypeScript type definitions
+└── constants.ts       # Application constants
 ```
 
-This flow:
-- Displays a multi-wallet selector
-- Handles QR codes automatically
-- Uses deep links on mobile
-- Establishes a secure session
+## Contributing
 
----
+Contributions are welcome! Please read our contributing guidelines before submitting PRs.
 
-#### 3. Network Configuration
+## License
 
-```ts
-import { StacksMainnet } from "@stacks/network";
-
-const network = new StacksMainnet();
-```
-
-Use testnet explicitly for local development when needed.
-
----
-
-## 📱 Mobile Wallet Troubleshooting
-
-### ❌ Wallet Won’t Connect on Mobile
-
-**Causes**
-- App not served over HTTPS
-- Missing or invalid app icon
-- Unsupported browser
-
-**Fix**
-- Deploy with HTTPS
-- Ensure `/public/icon.png` loads
-- Use Chrome or Safari
-
----
-
-### ❌ “Couldn’t Connect” Error
-
-**Causes**
-- Wallet not installed
-- Conflicting wallet providers
-- Deprecated APIs
-
-**Fix**
-- Avoid `window.web3`
-- Do not redefine wallet providers
-- Use supported wallet SDKs only
-
----
-
-### ❌ QR Works on Desktop but Not Mobile
-
-**Expected Behavior**
-- Desktop → QR modal
-- Mobile → Deep link to wallet app
-
-**Fix**
-- Open site in mobile browser
-- Install wallet app
-- Avoid in-app browsers (Twitter, Telegram)
-
----
-
-### ❌ No STX Balance or Price Showing
-
-Wallet connection only provides:
-- Wallet address
-- Authentication session
-
-You must explicitly fetch:
-- Balances from Stacks API
-- Prices from an external indexer or API
-
----
-
-### ❌ SSL / Network Errors
-
-Errors like:
-```
-ERR_SSL_VERSION_OR_CIPHER_MISMATCH
-```
-
-**Fix**
-- Use a valid SSL certificate
-- Avoid mixed HTTP/HTTPS content
-- Confirm APIs support HTTPS
-
----
-
-### Debug Checklist
-
-Before reporting an issue:
-- ✅ HTTPS enabled
-- ✅ Icon accessible
-- ✅ Wallet installed
-- ✅ Correct network selected
-- ✅ No deprecated provider usage
-- ✅ Browser-based testing
-
----
-
-## 💡 Future Enhancements
-
-- Contribution scoring system
-- Address labeling & notes
-- Historical analytics views
-- Multi-network support
-- Exportable activity reports
-
----
-
-## 📄 License
-
-MIT License  
-Free to use, modify, and build upon.
-
----
-
-Built with ❤️ for the Stacks ecosystem
+MIT

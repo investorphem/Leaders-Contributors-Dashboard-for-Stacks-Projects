@@ -16,7 +16,7 @@ export function getUserAddress() {
 export function connectWallet() {
   return new Promise((resolve, reject) => {
     showConnect(
-      appDetails
+      appDetail
         name: 'STX Portfolio T
         icon: window.location.origin + '/ic
       }

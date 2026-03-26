@@ -12,6 +12,7 @@ The app runs entirely client-side, requiring **no backend servers or smart contr
 
 ---
 
+
 ## ✨ Key Features
 
 ### 🔐 Wallet Connectivity

@@ -25,7 +25,7 @@ export function connectWallet() {
       userSession,
 
       onFinish: () => {
-        const userData = userSession.loadUserData()
+        const userData = userSession.loadUserData(
         resolve(userData)
       },
 

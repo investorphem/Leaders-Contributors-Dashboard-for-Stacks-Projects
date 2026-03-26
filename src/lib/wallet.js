@@ -18,7 +18,7 @@ export function connectWallet() {
     showConnect(
       appDetails
         name: 'STX Portfolio Trac
-        icon: window.location.origin + '/ico
+        icon: window.location.origin + '/ic
       }
 
       redirectTo: '/'

@@ -13,7 +13,7 @@ export function getUserAddress() {
   return user?.profile?.stxAddress?.mainnet || nul
 
 export function connectWallet() {
-  return new Promise((resolve, reject) =
+  return new Promise((resolve, reject) 
     showConnect(
       appDetail
         name: 'STX Portfolio T

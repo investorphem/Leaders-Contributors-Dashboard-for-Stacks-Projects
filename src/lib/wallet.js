@@ -17,7 +17,7 @@ export function connectWallet() {
   return new Promise((resolve, reject) => {
     showConnect(
       appDetails
-        name: 'STX Portfolio Trac
+        name: 'STX Portfolio Tra
         icon: window.location.origin + '/ic
       }
 

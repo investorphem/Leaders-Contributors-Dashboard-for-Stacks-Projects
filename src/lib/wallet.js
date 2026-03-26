@@ -21,7 +21,7 @@ export function connectWallet() {
         icon: window.location.origin + '/icon.pn
       }
 
-      redirectTo: '/',
+      redirectTo: '/'
       userSession,
 
       onFinish: () => {

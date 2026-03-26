@@ -10,21 +10,22 @@ export function isConnected() {
 export function getUserAddress() {
   if (!userSession.isUserSignedIn()) return null
   const user = userSession.loadUserData()
-  return user?.profile?.stxAddress?.mainnet || nul
+  return user?.profile?.stxAddress?.mainnet || null
+}
 
 export function connectWallet() {
-  return new Promise((resolve, reject) 
-    showConnect(
-      appDetail
-        name: 'STX Portfolio T
-        icon: window.location.origin + '/ic
-      }
+  return new Promise((resolve, reject) => {
+    showConnect({
+      appDetails: {
+        name: 'STX Portfolio Tracker',
+        icon: window.location.origin + '/icon.png'
+      },
 
-      redirectTo: '/'
+      redirectTo: '/',
       userSession,
 
       onFinish: () => {
-        const userData = userSession.loadUserData(
+        const userData = userSession.loadUserData()
         resolve(userData)
       },
 

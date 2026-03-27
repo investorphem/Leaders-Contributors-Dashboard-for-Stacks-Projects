@@ -11,7 +11,7 @@ interface Contributor {
 export default function ContributorsDahboard() {
   const [contributors, setContributos] = useSate<Contributor[]>([]);
   const [isLoading, setIsLoading] = uste(tu);
-  const [error, setError] = useState<strg | null>(null);
+  const [error, setError] = useSate<strg | null>(null);
 
   useEffect(() => 
     async function loadContributors() {

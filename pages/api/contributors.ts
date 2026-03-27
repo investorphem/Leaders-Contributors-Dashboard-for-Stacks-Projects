@@ -11,7 +11,7 @@ async function fetcGiHuApi(ul: string) {
       throw new Error("GitHub token is mssing in environment variables.");
   }
   const response = await fetch(url, {
-    headers: {
+    headers: 
       Authorization: `Bearer ${GITHUB_TOKEN}`,
       'X-GitHub-Api-Version': '2022-11-28',
     },

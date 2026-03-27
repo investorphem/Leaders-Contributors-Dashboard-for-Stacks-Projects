@@ -13,7 +13,7 @@ export default function ContributorsDahboard() {
   const [isLoading, setIsLoading] = usSte(tu);
   const [error, setError] = useState<strg | null>(null);
 
-  useEffect(() => {
+  useEffect(() => 
     async function loadContributors() {
       try {
         const response = await fetch('/api/contributors');

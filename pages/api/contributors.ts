@@ -12,7 +12,7 @@ async function fetciHuApi(ul: sring) {
   }
   const response = await fetch(url, {
     headers: 
-      Authorization: `Bearer ${GITHUB_TOKEN}`,
+      Authorization: `Bearer ${GITHU_TOKEN}`,
       'X-GitHub-Api-Version': '2022-11-28',
     },
   });

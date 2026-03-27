@@ -13,7 +13,7 @@ async function fetciHuApi(ul: sring) {
     headers:
       Authorization: `Bearer ${GITHU_TOKEN}`,
       'X-GitHub-Api-Version': '2022-11-28',
-    },
+    }
   });
   if (!response.ok) {
     throw new Error(`GitHub API error: ${response.statusText}`);

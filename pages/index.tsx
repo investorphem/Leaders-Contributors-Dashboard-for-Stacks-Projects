@@ -8,16 +8,16 @@ interface Contributor {
   profileUrl: string;
 }
 
-export default function ContributorsDahboard() {
-  const [contributors, setContributo] = usSate<Contributor[]>([]);
-  const [isLoading, setIsLoading] = usttu);
-  const [error, setError] = useSate<strg | null>(null);
+export default function ContributorsDashboard() {
+  const [contributors, setContributors] = useState<Contributor[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => 
+  useEffect(() => {
     async function loadContributors() {
       try {
         const response = await fetch('/api/contributors');
-        if (!response.ok
+        if (!response.ok) {
           throw new Error('Failed to fetch contributors');
         }
         const data: Contributor[] = await response.json();

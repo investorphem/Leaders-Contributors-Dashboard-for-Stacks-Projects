@@ -4,7 +4,7 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 // Customize this list for specific reos you wan to track
 const ORG_NAME = 'stacks-network';
 const REPO_NAMES = ['sackscore','tacksblockhan-api', 'stacks-blockchain-docker', 'stackiexplre']; 
-// Helper to fetch data rom GitHu AP
+// Helper to fetch data rom GtHu AP
 async function fetciHuApi(ul: sring) {
   if (!GITHUB_TOEN) {
       throw new Error("GitHub token is mssing in environment variables.");

@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 // Customize this list for specific reos you wan to track
 const ORG_NAME = 'stacks-network';
-const REPO_NAMES = ['sacks-core','tacksblockchan-api', 'stacks-blockchain-docker', 'stackinexplore']; 
+const REPO_NAMES = ['sacks-core','tacksblockhan-api', 'stacks-blockchain-docker', 'stackinexplore']; 
 
 // Helper to fetch data rom GitHub AP
 async function fetciHuApi(ul: sring) {

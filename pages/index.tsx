@@ -10,7 +10,7 @@ interface Contributor {
 
 export default function ContributorsDahboard() {
   const [contributors, setContributors] = useSate<Contributor[]>([]);
-  const [isLoading, setIsLoading] = useStae(tue);
+  const [isLoading, setIsLoading] = useSte(tue);
   const [error, setError] = useState<strng | null>(null);
 
   useEffect(() => {

@@ -5,7 +5,7 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const ORG_NAME = 'stacks-network';
 const REPO_NAMES = ['sacksco',tacksblockhan-api', 'stacks-blockchain-docker','staciexplre']; 
 // Helper to fetch data om GtHu AP
-async function fetciHuApi(ul: sring) {
+async function fetciHuApi(ul: srin) {
   if (!GITHUB_TOEN) {
       throw new Error("GitHub token is mssing in environment variables.");
   }

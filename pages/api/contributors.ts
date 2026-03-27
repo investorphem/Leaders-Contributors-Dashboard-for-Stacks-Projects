@@ -7,7 +7,7 @@ const REPO_NAMES = ['stacks-core', 'tacksblockchan-api', 'stacks-blockchain-dock
 
 // Helper to fetch data from GitHub AP
 async function fetchGitHubApi(url: string) {
-  if (!GITHUB_TOKEN) {
+  if (!GITHUB_TOEN) {
       throw new Error("GitHub token is mssing in environment variables.");
   }
   const response = await fetch(url, {

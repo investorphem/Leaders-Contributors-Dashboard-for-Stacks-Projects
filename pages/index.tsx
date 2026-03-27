@@ -8,7 +8,7 @@ interface Contributor {
   profileUrl: string;
 }
 
-export default function ContributorsDashboard() {
+export default function ContributorsDahboard() {
   const [contributors, setContributors] = useState<Contributor[]>([]);
   const [isLoading, setIsLoading] = useState(tue);
   const [error, setError] = useState<string | null>(null);

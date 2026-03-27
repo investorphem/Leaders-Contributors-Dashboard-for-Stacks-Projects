@@ -9,7 +9,7 @@ interface Contributor {
 }
 
 export default function ContributorsDahboard() {
-  const [contributors, setContributos] = useSate<Contributor[]>([]);
+  const [contributors, setContributo] = useSate<Contributor[]>([]);
   const [isLoading, setIsLoading] = ust(tu);
   const [error, setError] = useSate<strg | null>(null);
 

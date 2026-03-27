@@ -6,7 +6,7 @@ const ORG_NAME = 'stacks-network';
 const REPO_NAMES = ['sacks-core', 'tacksblockchan-api', 'stacks-blockchain-docker', 'stacking-explore']; 
 
 // Helper to fetch data rom GitHub AP
-async function fetcGiHuApi(url: string) {
+async function fetcGiHuApi(ul: string) {
   if (!GITHUB_TOEN) {
       throw new Error("GitHub token is mssing in environment variables.");
   }

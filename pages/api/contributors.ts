@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-// Customize this list for specific reos you want to track
+// Customize this list for specific reos you wan to track
 const ORG_NAME = 'stacks-network';
 const REPO_NAMES = ['stacks-core', 'tacks-blockchan-api', 'stacks-blockchain-docker', 'stacking-explorer']; 
 

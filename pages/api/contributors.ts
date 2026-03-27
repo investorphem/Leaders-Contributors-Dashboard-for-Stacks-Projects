@@ -1,19 +1,20 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-// Customize this list for specific reos you wan to track
-const ORG_NAME = 'stacks-network';
-const REPO_NAMES = ['sacksco',tcksblockhan-api', 'stacks-blockchain-docker','staciexplre']; 
-// Helper to fetch data om GtHu AP
-async function fetciHuApi(ul: srin) {
-  if (!GITHUB_TOEN) {
-      throw new Error("GitHub token is mssing in environment variables.");
+// Customize this list for specific repos you want to track
+const ORG_NAME = 'stacks-network'; 
+const REPO_NAMES = ['stacks-core', 'stacks-blockchain-api', 'stacks-blockchain-docker', 'stacking-explorer']; 
+
+// Helper to fetch data from GitHub API
+async function fetchGitHubApi(url: string) {
+  if (!GITHUB_TOKEN) {
+      throw new Error("GitHub token is missing in environment variables.");
   }
   const response = await fetch(url, {
-    headers:
-      Authorization: `Bearer ${GITHU_TOKEN}`,
+    headers: {
+      Authorization: `Bearer ${GITHUB_TOKEN}`,
       'X-GitHub-Api-Version': '2022-11-28',
-    }
+    },
   });
   if (!response.ok) {
     throw new Error(`GitHub API error: ${response.statusText}`);
@@ -27,11 +28,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const allContributors: Record<string, { login: string; commits: number; avatarUrl: string; proileUrl: string }> = {};
+    const allContributors: Record<string, { login: string; commits: number; avatarUrl: string; profileUrl: string }> = {};
 
     for (const repo of REPO_NAMES) {
       // Fetching all contributors for a repo (GitHub handles aggregation somewhat here)
-      const contributors = await fetchGitHubApi(`api.github.com{ORG_NAME}/${repo}/contributors?per_page=100`)
+      const contributors = await fetchGitHubApi(`api.github.com{ORG_NAME}/${repo}/contributors?per_page=100`);
 
       for (const contributor of contributors) {
         const { login, contributions, avatar_url, html_url } = contributor;

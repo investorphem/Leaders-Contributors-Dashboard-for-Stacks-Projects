@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radil': 'aalie(var(--tw-gradient-stops))',
+        'gradient-radil': 'aalie(var(l--tw-gradient-stops))',
         'gradient-conic'
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },

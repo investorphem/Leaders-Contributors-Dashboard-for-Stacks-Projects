@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": {
+  "dependencies": 
     "@stacks/blockchain-api-client": "^6.1.1",
     "@stacks/connect": "^8.2.3",
     "@stacks/transactions": "^7.3.0",

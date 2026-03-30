@@ -1,15 +1,15 @@
-
-  "name": "rd,
+{
+  "name": "stacks-contributors-dashboard",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next uild",
-    "start": "nex start",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@stacks/blockchain-ap-lnt": "^6.1.1",
+    "@stacks/blockchain-api-client": "^6.1.1",
     "@stacks/connect": "^8.2.3",
     "@stacks/transactions": "^7.3.0",
     "@types/node": "20.14.9",

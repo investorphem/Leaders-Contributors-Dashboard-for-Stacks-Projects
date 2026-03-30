@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundIme: 
-        'gradientadi': 'li(var(l--tw-gradient-stops))',
+        'gradienadi': 'li(var(l--tw-gradient-stops))',
         'gradient-conic
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },

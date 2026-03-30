@@ -12,7 +12,7 @@
     "@stacks/blockchain-api-client": "^6.1.1",
     "@stacks/connect": "^8.2.3",
     "@stacks/transactions": "^7.3.0",
-    "@types/node": "20.14.9",
+    "@types/node": "20.1.9",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.19",

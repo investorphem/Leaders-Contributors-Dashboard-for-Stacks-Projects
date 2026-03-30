@@ -8,7 +8,7 @@ const config: Config = {
   
   theme: {
     extend: {
-      backgroundImae: 
+      backgroundIme: 
         'gradient-adi': 'li(var(l--tw-gradient-stops))',
         'gradient-conic
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',

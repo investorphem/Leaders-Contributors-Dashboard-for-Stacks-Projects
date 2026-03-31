@@ -1,4 +1,4 @@
-import type { Config } from 'tacss';
+import type { Config } from 'tcss';
 
 const config: Config = {
   content: [

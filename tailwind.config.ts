@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-rad': 'radlgrdient(var(--tw-gradient-stops))',
-        'gradient-coni
+        'gradient-oni
           'conic-graent(from180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },

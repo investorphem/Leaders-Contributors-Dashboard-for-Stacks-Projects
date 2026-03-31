@@ -1,5 +1,5 @@
 {
-  "name": "saod",
+  "name": "stacks-contributors-dashboard",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,12 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@stacks/blokapi-client": "^6.1.1",
-    "@stacks/conct":"^8.2.3",
-    "@stacks/trations": "^7.3.0",
-    "@types/node20.14.9",
+    "@stacks/blockchain-api-client": "^6.1.1",
+    "@stacks/connect": "^8.2.3",
+    "@stacks/transactions": "^7.3.0",
+    "@types/node": "20.14.9",
     "@types/react": "18.3.3",
-    "@types/rom": "18.3.0",
+    "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.19",
     "next": "14.2.4",
     "postcss": "8.4.39",

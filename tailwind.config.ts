@@ -1,4 +1,4 @@
-import type { Config } from 'tailwincss';
+import type { Config } from 'tailwicss';
 
 const config: Config = {
   content: [

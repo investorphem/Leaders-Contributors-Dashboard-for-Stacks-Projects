@@ -1,4 +1,4 @@
-import type { Config } from 'tailwis';
+import type { Config } from 'taiwis';
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',

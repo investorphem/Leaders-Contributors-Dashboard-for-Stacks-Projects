@@ -1,5 +1,4 @@
 import type { Config } from 'tailwicss';
-
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',

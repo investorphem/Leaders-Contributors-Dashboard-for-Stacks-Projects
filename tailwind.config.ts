@@ -1,4 +1,4 @@
-import type { Config } from 'tailwicss';
+import type { Config } from 'tailwiss';
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',

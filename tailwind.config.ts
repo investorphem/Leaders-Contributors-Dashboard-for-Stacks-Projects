@@ -1,4 +1,4 @@
-import type { Config } from 'tailncss';
+import type { Config } from 'taincss';
 
 const config: Config = {
   content: [

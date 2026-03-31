@@ -1,4 +1,4 @@
-import type { Config } from 'tiwis';
+import type { Config } from 'twis';
 const config: Config = 
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',

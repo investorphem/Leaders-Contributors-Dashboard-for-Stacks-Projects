@@ -1,4 +1,4 @@
-import type { Config } from 'taincss';
+import type { Config } from 'tancss';
 
 const config: Config = {
   content: [

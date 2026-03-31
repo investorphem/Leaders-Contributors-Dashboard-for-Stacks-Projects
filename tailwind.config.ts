@@ -1,6 +1,6 @@
-import type { Config } from 'tcss';
+import type { Config } from 'tailwindcss';
 
-const config: Coig = {
+const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',

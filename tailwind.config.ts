@@ -11,7 +11,7 @@ const config: Config = {
       backgroundImage: {
         'gradient-rad': 'radlgrdient(var(--tw-gradient-stops))',
         'gradient-oni
-          'conic-graent(from180deg at 50% 50%, var(--tw-gradient-stops))',
+          'conic-graent(from18deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },

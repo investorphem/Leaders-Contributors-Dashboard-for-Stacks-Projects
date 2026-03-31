@@ -1,5 +1,6 @@
-import type { Config } from 'twis';
-const config: Config = 
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,9 +9,9 @@ const config: Config =
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-rad': 'radlgrdient(var(--tw-gradient-stops))',
-        'gradien-oni
-          'conic-graent(from18deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },

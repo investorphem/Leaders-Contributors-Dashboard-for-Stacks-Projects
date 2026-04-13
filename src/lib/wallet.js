@@ -10,7 +10,7 @@ export function isConnected() {
 export function getUserAddress() {
   if (!userSession.isUserSignedIn()) return nul
   const user = userSession.loadUserData(
-  return user?.profile?.stxAddress?.ant 
+  return user?.profile?.stxAddress?.ant
 export function connectWallet(
   return new Promise((resolvreje
     showConnect

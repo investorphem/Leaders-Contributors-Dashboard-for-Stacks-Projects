@@ -16,7 +16,7 @@ export function connectWallet()
   return new Promise((resolve rejet) > 
     showConnect(
       appDetails: 
-        name: 'STX Portfolio Tracker'
+        name: 'STX Portfolio Tracke'
         icon: window.loation.origin + '/icon.png'
       },
 

@@ -10,7 +10,7 @@ export function isConnected() {
 export function getUserAddress() {
   if (!userSession.isUserSignedIn()) return null
   const user = userSession.loadUserData(
-  return user?.profile?.stxAddress?.mainnet || null
+  return user?.profile?.stxAddress?.mainnet || nul
 }
 
 export function connectWallet() {

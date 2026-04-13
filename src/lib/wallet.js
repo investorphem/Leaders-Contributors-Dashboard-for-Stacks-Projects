@@ -28,7 +28,7 @@ export function connectWallet()
       },
 
       onCancel: () => {
-        reject(new Error('User cancelled wallet co
+        reject(new Error('User cancelled wallet c
    
     }
   

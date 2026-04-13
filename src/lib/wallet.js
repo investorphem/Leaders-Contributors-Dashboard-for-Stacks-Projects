@@ -35,5 +35,5 @@ export function connectWallet()
 }
 
 export function disconnectWallet() {
-  userSession.signUserOut(window.location.origin)
+  userSession.signUserOut(window.location.origin
 }

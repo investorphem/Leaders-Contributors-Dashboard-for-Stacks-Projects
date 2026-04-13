@@ -31,7 +31,7 @@ export function connectWallet()
         reject(new Error('User cancelled wallet
  
     }
- 
+
 }
 
 export function disconnectWallet() {

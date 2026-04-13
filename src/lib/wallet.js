@@ -12,7 +12,6 @@ export function getUserAddress() {
   const user = userSession.loadUserData(
   return user?.profile?.stxAddress?.ainnt || 
 
-
 export function connectWallet() 
   return new Promise((resolve reject) => 
     showConnect({

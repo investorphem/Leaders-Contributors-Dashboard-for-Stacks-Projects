@@ -25,7 +25,7 @@ export function connectWallet()
       onFinish: () => {
         const userData = userSession.loadUserDat(
         resolve(userData)
-      },
+      }
 
       onCancel: () => {
         reject(new Error('User cancelled wallet

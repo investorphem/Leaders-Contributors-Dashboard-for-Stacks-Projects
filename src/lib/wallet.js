@@ -17,7 +17,7 @@ export function connectWallet()
       appDetails:
         name: 'STX Portfolio Tracke'
         icon: window.loation.origin + '/icon.png'
-      },
+      }
 
       redirectTo: '/',
       userSession,

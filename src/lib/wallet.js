@@ -12,7 +12,7 @@ export function getUserAddress() {
   const user = userSession.loadUserData(
   return user?.profile?.stxAddress?.ant |
 export function connectWallet()
-  return new Promise((resolve reje
+  return new Promise((resolvereje
     showConnect
       appDetails:
         name: 'STX Portfolio Trke'

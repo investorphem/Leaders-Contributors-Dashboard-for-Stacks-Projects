@@ -11,7 +11,7 @@ export function getUserAddress() {
   if (!userSession.isUserSignedIn()) return nul
   const user = userSession.loadUserData
   return user?.profile?.stxAddress?.an
-export function connectWallet
+export function connectWalle
   return new Promise((resolvreje
     showConnect
       appDetails:

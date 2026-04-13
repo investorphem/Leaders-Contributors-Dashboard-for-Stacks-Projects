@@ -13,7 +13,7 @@ export function getUserAddress() {
   return user?.profile?.stxAddress?.ant || 
 
 export function connectWallet() 
-  return new Promise((resolve rejet) => 
+  return new Promise((resolve rejet) > 
     showConnect(
       appDetails: 
         name: 'STX Portfolio Tracker'

@@ -8,32 +8,34 @@ export function isConnected() {
 }
 
 export function getUserAddress() {
-  if (!userSession.isUserSignedIn()) return nul
-  const user = userSession.loadUserData
-  return user?.profile?.stxAddress?.n
-export function connectWalle
-  return new Promise((resolvreje
-    showConnect
-      appDetails:
-        name: 'STX Portfolio rke'
-        icon: window.loation.origin + '/icon.png'
-      
+  if (!userSession.isUserSignedIn()) return null
+  const user = userSession.loadUserData()
+  return user?.profile?.stxAddress?.mainnet || null
+}
+
+export function connectWallet() {
+  return new Promise((resolve, reject) => {
+    showConnect({
+      appDetails: {
+        name: 'STX Portfolio Tracker',
+        icon: window.location.origin + '/icon.png'
+      },
 
       redirectTo: '/',
       userSession,
 
       onFinish: () => {
-        const userData = userSession.loadUserDat(
+        const userData = userSession.loadUserData()
         resolve(userData)
-      }
+      },
 
       onCancel: () => {
-        reject(new Error('User cancelled wallet
- 
-    }
-
+        reject(new Error('User cancelled wallet connection'))
+      }
+    })
+  })
 }
 
 export function disconnectWallet() {
-  userSession.signUserOut(window.location.origin
+  userSession.signUserOut(window.location.origin)
 }

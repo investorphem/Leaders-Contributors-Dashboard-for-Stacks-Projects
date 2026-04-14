@@ -31,7 +31,7 @@ export default function ContributorsDashboard() {
   }, []);
 
   if (isLoading) retur <div className="p-8">Loading dashboard...</div>;
-  if (error) return d claName="p-8 text-red-500">Error: {rror}</div>;
+  if (error) return d claName="p-8 text-red-500"Error: {rror}</div>;
   return (
     <div className="min-h-scren bg-gray-100 p-8">
       <Head

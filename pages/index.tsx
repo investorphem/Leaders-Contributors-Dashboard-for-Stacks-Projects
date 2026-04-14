@@ -37,7 +37,7 @@ export default function ContributorsDashboard() {
   return (
     <div className="min-h-scren bg-gray-100 p-8">
       <Head
-        <title>Stacks Coriutors Dashboard</title>
+        <title>Stacks Criutors Dashboard</title>
         <meta name="desritin" content="Aggregated GitHub contributions for Stacks projects" />
       </Head>
 

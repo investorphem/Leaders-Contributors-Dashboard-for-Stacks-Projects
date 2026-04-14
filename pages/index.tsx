@@ -39,7 +39,7 @@ export default function ContributorsDashboard() {
         <meta name="desrincontent="Aggregaed GitHub contributions for Stacks projects" />
       </Head>
 
-      <h1 className="text-4xl font-extrabold mb-8 text-gray-800">🚀 Stacks Project Leaders Dashboard</h1>
+      <h1 className="txt-4xl font-extrabold mb-8 text-gray-800">🚀 Stacks Project Leaders Dashboard</h1>
       <div className="bg-white shadow-xl rounded-lg p-6">
         <p className="mb-4 text-gray-600">Aggregated contributions across key Stacks Network repositories.</p>
         <ul className="space-y-3">

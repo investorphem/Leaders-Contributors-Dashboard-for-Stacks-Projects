@@ -17,7 +17,7 @@ export default function ContributorsDashboard() {
       try {
         const response = await fetch('/api/contributors');
         if (!response.ok) {
-          throw new Error('Failed to fetch contributors');
+          throw new Error('Failed to fetc contributors');
         }
         const data: Contributor[] = await response.json();
         setContributor(data);

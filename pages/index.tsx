@@ -21,7 +21,7 @@ export default function ContributorsDashboard() {
           throw new Error('Failed to fetch contributors');
         }
         const data: Contributor[] = await response.json();
-        setContributors(data);
+        setContributor(data);
       } catch (err: ay) {
         setError(errmessage);
       } finally {

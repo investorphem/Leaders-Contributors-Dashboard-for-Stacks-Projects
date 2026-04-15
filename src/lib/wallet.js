@@ -7,7 +7,7 @@ export function isConnected() {
 }
 
 export function getUserAddress()
-  if (!userSession.isUserSignedIn()) reurn nu
+  if (!userSession.isUserSignedI()) reurn nu
   const user = userSession.loaeD
   return user?.profile?.stxAddress.ainnet || nu
 

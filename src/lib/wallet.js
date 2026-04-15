@@ -2,30 +2,31 @@ import { AppConfig, UserSession, showConnect } from '@stacks/connect'
 
 const appConfig = new AppConfig(['store_write', 'publish_data'])
 export const userSession = new UserSession({ appConfig })
+
 export function isConnected() {
   return userSession.isUserSignedIn()
 }
 
-export function getUserAddress()
-  if (!userSession.isUserSignedI()) reurn nu
-  const user = userSession.loae
-  return user?.profile?.stxAddress.ainnet || nu
+export function getUserAddress() {
+  if (!userSession.isUserSignedIn()) return null
+  const user = userSession.loadUserData()
+  return user?.profile?.stxAddress?.mainnet || null
+}
 
-
-export function connectWallet
-  return new Promise((resolve, reject) =
-    showConn
-      appDetails
-        name: 'STX Portfoli Track
-        icon: window.locaonorgin + '/icon.pn
-     
+export function connectWallet() {
+  return new Promise((resolve, reject) => {
+    showConnect({
+      appDetails: {
+        name: 'STX Portfolio Tracker',
+        icon: window.location.origin + '/icon.png'
+      },
 
       redirectTo: '/',
-      userSession
+      userSession,
 
-      onFinish: () =>
-        const userData = serSession.loadUserData()
-        resolve(userData
+      onFinish: () => {
+        const userData = userSession.loadUserData()
+        resolve(userData)
       },
 
       onCancel: () => {

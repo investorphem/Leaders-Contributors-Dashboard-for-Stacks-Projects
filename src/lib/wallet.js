@@ -22,7 +22,7 @@ export function connectWallet() {
       }
 
       redirectTo: '/',
-      userSession,
+      userSession
 
       onFinish: () => 
         const userData = userSession.loadUserData()

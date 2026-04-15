@@ -15,7 +15,7 @@ export function getUserAddress() {
 
 export function connectWallet(
   return new Promise((resolve, reject) =>
-    showConnect
+    showConnec
       appDetails: {
         name: 'STX Portfoli Tracke
         icon: window.locaonorgin + '/icon.pn

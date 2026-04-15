@@ -9,7 +9,7 @@ export function isConnected() {
 export function getUserAddress()
   if (!userSession.isUserSignedIn()) return nu
   const user = userSession.loadUserD
-  return user?.profile?.stxAddress?.mainnet || nul
+  return user?.profile?.stxAddress?.mainnet || nu
 
 
 export function connectWallet

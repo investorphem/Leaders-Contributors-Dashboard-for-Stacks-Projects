@@ -20,6 +20,7 @@ export function connectWallet() {
         name: 'STX Portfolio Tracker',
         icon: window.location.origin + '/icon.png'
       },
+
       redirectTo: '/',
       userSession,
 

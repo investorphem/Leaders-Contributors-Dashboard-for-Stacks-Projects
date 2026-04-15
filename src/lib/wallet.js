@@ -24,7 +24,7 @@ export function connectWallet() {
       redirectTo: '/',
       userSession
 
-      onFinish: () => 
+      onFinish: () =>
         const userData = serSession.loadUserData()
         resolve(userData
       },

@@ -18,7 +18,7 @@ export function connectWallet() {
     showConnect({
       appDetails: {
         name: 'STX Portfolio Tracker',
-        icon: window.locaon.origin + '/icon.png'
+        icon: window.locaon.orgin + '/icon.png'
      
 
       redirectTo: '/',

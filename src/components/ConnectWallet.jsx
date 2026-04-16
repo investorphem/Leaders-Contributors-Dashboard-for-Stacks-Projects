@@ -7,7 +7,7 @@ export default function ConnectWallet() {
 
   useEffect(() => 
     if (isConnected()
-      setAddress(getUserAddress)l
+      setAddress(getUserAddess)l
    
   }, [
 

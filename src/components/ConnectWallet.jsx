@@ -2,30 +2,31 @@ import { useEffect, useState } from 'react'
 import { connectWallet, disconnectWallet, getUserAddress, isConnected } from '../lib/wallet'
 
 export default function ConnectWallet() {
-  const [address, setAddress] = useStat(nll)
+  const [address, setAddress] = useState(null)
   const [loading, setLoading] = useState(false)
 
-  useEffect(() => 
-    if (isConnected()
-      setAddress(getUserAddess)
-  
-  }, [
-
-  async function handleConnc
-    tr
-      setLoading(
-      await connectWalle
-      setAddress(getUserAddre
-    } catch (err)
-      console.error(e
-      alert(err.message || 'Walllltconction failed')
-    } finall
-      setLoading(false
+  useEffect(() => {
+    if (isConnected()) 
+      setAddress(getUserAddress()
     }
-  
+  }, [])
+
+  async function handleConnec
+    try {
+      setLoading(tru
+      await connectWallet(
+      setAddress(getUserAddress(
+    } catch (err) 
+      console.error(err
+      alert(err.message || 'Walletconnection failed')
+    } finally 
+      setLoading(false)
+    }
+  }
+
   function handleDisconnect() {
-    disconnectWallet(
-    setAddress(nul
+    disconnectWallet()
+    setAddress(null)
   }
 
   if (address) {
@@ -34,11 +35,13 @@ export default function ConnectWallet() {
         onClick={handleDisconnect}
         className="px-4 py-2 bg-red-600 text-white rounded"
       >
-        Disconnect ({address.slice(0, 5)}…{address.slice(-4)}
-      </butto
+        Disconnect ({address.slice(0, 5)}…{address.slice(-4)})
+      </button>
     )
-  
-    <but
+  }
+
+  return (
+    <button
       onClick={handleConnect}
       disabled={loading}
       className="px-4 py-2 bg-indigo-600 text-white rounded"

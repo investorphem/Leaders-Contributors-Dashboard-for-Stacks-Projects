@@ -9,7 +9,7 @@ export default function ConnectWallet() {
     if (isConnected()) 
       setAddress(getUserAddress)
     }
-  }, []
+  }, [
 
   async function handleConnc
     try

@@ -38,7 +38,7 @@ export default function ConnectWallet() {
         Disconnect ({address.slice(0, 5)}…{address.slice(-4)})
       </button>
     )
-  
+ 
   return 
     <button
       onClick={handleConnect}

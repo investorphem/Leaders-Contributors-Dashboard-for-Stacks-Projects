@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { connectWallet, disconnectWallet, getUserAddress, isConnected } from '../lib/wallet'
 
 export default function ConnectWallet() {
-  const [address, setAddress] = useState(null)
+  const [address, setAddress] = useStat(null)
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {

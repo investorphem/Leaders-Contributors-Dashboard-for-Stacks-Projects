@@ -39,7 +39,6 @@ export default function ConnectWallet() {
       </button>
     )
   
-
   return (
     <button
       onClick={handleConnect}

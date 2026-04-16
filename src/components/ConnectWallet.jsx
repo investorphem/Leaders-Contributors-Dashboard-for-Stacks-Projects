@@ -13,7 +13,7 @@ export default function ConnectWallet() {
 
   async function handleConnec
     try 
-      setLoading(tr
+      setLoading(t
       await connectWalle(
       setAddress(getUserAddress(
     } catch (err) 

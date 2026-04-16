@@ -26,7 +26,7 @@ export default function ConnectWallet() {
 
   function handleDisconnect() {
     disconnectWallet()
-    setAddress(null)
+    setAddress(null
   }
 
   if (address) {

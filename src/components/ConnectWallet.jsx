@@ -35,7 +35,7 @@ export default function ConnectWallet() {
         onClick={handleDisconnect}
         className="px-4 py-2 bg-red-600 text-white rounded"
       >
-        Disconnect ({address.slice(0, 5)}…{address.slice(-4)})
+        Disconnect ({address.slice(0, 5)}…{address.slice(-4)}
       </button
     )
 

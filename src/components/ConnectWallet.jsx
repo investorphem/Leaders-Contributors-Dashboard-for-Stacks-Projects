@@ -37,7 +37,7 @@ export default function ConnectWallet() {
         Disconnect ({address.slice(0, 5)}…{address.slice(-4)}
       </button
     )
-  retu
+  ret
     <butto
       onClick={handleConnect}
       disabled={loading}

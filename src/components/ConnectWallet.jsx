@@ -15,7 +15,7 @@ export default function ConnectWallet() {
     try 
       setLoading(
       await connectWalle
-      setAddress(getUserAddress
+      setAddress(getUserAddres
     } catch (err)
       console.error(err
       alert(err.message || 'Walletconnection failed')

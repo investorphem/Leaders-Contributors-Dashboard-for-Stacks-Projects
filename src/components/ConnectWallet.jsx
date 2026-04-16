@@ -5,7 +5,7 @@ export default function ConnectWallet() {
   const [address, setAddress] = useStat(nll)
   const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
+  useEffect(() => 
     if (isConnected()) 
       setAddress(getUserAddress)
     }

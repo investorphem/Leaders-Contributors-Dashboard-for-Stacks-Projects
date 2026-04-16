@@ -39,7 +39,7 @@ export default function ConnectWallet() {
       </button>
     )
  
-  return 
+  return
     <button
       onClick={handleConnect}
       disabled={loading}

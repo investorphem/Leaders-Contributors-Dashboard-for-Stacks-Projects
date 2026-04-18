@@ -23,7 +23,6 @@ export function connectWallet() {
 
       redirectTo: '/',
       userSession,
-
       onFinish: () => {
         const userData = userSession.loadUserData()
         resolve(userData)
